@@ -5,11 +5,8 @@ import { signinUser, signupUser, validateUser } from '../businesslogic/usersAuth
 
 const userRouter = new Router();
 
-// Реєстрація користувача
 userRouter.post('/signup', validator(signupSchema), signupUser);
-// Аутентифікація користувача
 userRouter.post('/signin', validator(signinSchema), signinUser);
-// Валідація об'єкта
 userRouter.post('/validateObject', validator(validateCreationSchema), validateUser);
 
 export { userRouter }
